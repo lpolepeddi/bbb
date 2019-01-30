@@ -9,10 +9,7 @@ chrome.webNavigation.onHistoryStateUpdated.addListener((details) => {
 });
 
 chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
-  if (tab.url.indexOf('www.espn.com') !== -1 ||
-    tab.url.indexOf('www.sbnation.com') !== -1 ||
-    tab.url.indexOf('www.foxsports.com') !== -1 ||
-    tab.url.indexOf('www.theringer.com') !== -1) {
+  if (tab.url.indexOf('www.espn.com')) {
     chrome.browserAction.setIcon({ path: 'icon-16.png', tabId: tabId });
   } else {
     chrome.browserAction.setIcon({ path: 'icon-16-disabled.png', tabId: tabId });

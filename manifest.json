@@ -1,0 +1,23 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery-3.2.1.min.js", "espn.js" ],
+      "matches": [ "*://www.espn.com/*" ]
+   } ],
+   "description": "Remove mentions of the Ball family from ESPN and other sports websites so that you can focus on actual basketball news.",
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjOkMY3/KJnXnQnVzE3gfk/kDnj+CaT2Q8EJMFYEx2DbqpSrtdkAWt3lopn7M423kO+kXRBfLoXpx3/6EqnFFQzFP+i8+7ksOrYMwV2aktKo+mg5bk5lHG/efqDQxpmAinwzUKhU6ctm00eNRuAl7B+v95DUKxLbUVByM8fVa+Z5OLHOn+PS83VUrZlGrToY74Xsfwdffwqyl6N/EQTGJtwWoyCh71ecGbGNGxLGSjj2JiuoQtjNV8GQawQcOt27B3TMjIm40xHw9MGzkZ93obPf3TMaGR9b/HH+gF/fWfLOWh8EP13tLlLuGB6ab7oqwtT5gIuTlqEPWQYODPNgxLwIDAQAB",
+   "manifest_version": 2,
+   "name": "Big Baller Blocker",
+   "permissions": [ "*://www.espn.com/*", "*://www.sbnation.com/*", "*://www.foxsports.com/*", "*://www.theringer.com/*", "tabs", "webNavigation" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.3"
+}
